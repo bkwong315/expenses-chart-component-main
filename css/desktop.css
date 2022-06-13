@@ -1,0 +1,130 @@
+html {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 18px;
+}
+
+body {
+    background-color: hsl(27, 66%, 92%);
+    margin: 0;
+}
+
+.content-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin: auto;
+    width: 35vw;
+}
+
+.content-header {
+    display: flex;
+    justify-content: space-between;
+    background-color: hsl(10, 79%, 65%);
+    color: white;
+    border-radius: 12px;
+    padding: 25px;
+    align-items: center;
+}
+
+#logo {
+    height: 50%;
+}
+
+.header-caption {
+    margin: 0;
+}
+
+.header-balance {
+    margin: 0;
+    font-weight: 700;
+    font-size: 32px;
+}
+
+.content-spacer {
+    flex-grow: 2;
+    height: 3vh;
+}
+
+.chart-container {
+    display: flex;
+    flex-direction: column;
+    background-color: hsl(33, 100%, 98%);
+    border-radius: 13px;
+    padding: 30px 35px;
+}
+
+.chart-title {
+    margin: 0;
+    font-size: 30px;
+    font-weight: 700;
+    color: hsl(25, 47%, 15%);
+}
+
+.bar-chart-container {
+    display: flex;
+    justify-content: space-between;
+    height: 30vh;
+    top: 50%;
+}
+
+.bar-container {
+    width: 10%;
+    text-align: center;
+    margin: 10px 0px 10px 0px;
+}
+
+.bar {
+    background-color: hsl(10, 79%, 65%);
+    height: 90%;
+    border-radius: 7px;
+}
+
+.bar-caption {
+    margin: 0;
+    height: 10%;
+}
+
+#chart-summary-line-break {
+    width: 100%;
+    border: 0;
+    height: 2px;
+    background-color: #f3ece4;
+}
+
+.month-stats-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.stats-total-caption, .stats-total-value, .stats-diff-value, .stats-diff-caption {
+    margin: 0;
+}
+
+.stats-diff-value {
+    text-align: right;
+}
+
+.stats-total-caption {
+    color: hsl(28, 10%, 53%);
+}
+
+.stats-total-value {
+    font-size: 50px;
+    font-weight: 700;
+    color: hsl(25, 47%, 15%);
+}
+
+.month-stat-container, .month-stats-diff {
+    display: flex;
+    justify-content: end;
+    flex-direction: column;
+}
+
+.stats-diff-value {
+    font-weight: 700;
+    color: hsl(25, 47%, 15%);
+}
+
+.stats-diff-caption {
+    color: hsl(28, 10%, 53%);
+}
