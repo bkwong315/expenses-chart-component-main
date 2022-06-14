@@ -5,10 +5,14 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&display=swap" rel="stylesheet"> 
   
   <title>Frontend Mentor | Expenses chart component</title>
 
   <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <link rel="stylesheet" href="css\desktop.css" />
   <style>
     .attribution { font-size: 11px; text-align: center; }
     .attribution a { color: hsl(228, 45%, 44%); }
@@ -16,28 +20,76 @@
 </head>
 <body>
 
-  My balance
-  $921.48
+  <div class="content-container">
+    <div class="content-header">
+      <div class="balance-container">
+        <p class="header-caption">My balance</p>
+        <p class="header-balance">$921.48</p>
+      </div>
+      <img id="logo" src="images\logo.svg">
+    </div>
 
-  Spending - Last 7 days
+    <div class="content-spacer"></div>
 
-  mon
-  tue
-  wed
-  thu
-  fri
-  sat
-  sun
+    <div class="chart-container">
+      <p class="chart-title">
+        Spending - Last 7 days
+      </p>
 
-  Total this month
-  $478.33
+      <div class="bar-chart-container">
+        <div class="bar-container">
+          <div class="bar"></div>
+          <p class="bar-caption">mon</p>
+        </div>
+        <div class="bar-container">
+          <div class="bar"></div>
+          <p class="bar-caption">tue</p>
+        </div>
+        <div class="bar-container">
+          <div class="bar"></div>
+          <p class="bar-caption">wed</p>
+        </div>
+        <div class="bar-container">
+          <div class="bar"></div>
+          <p class="bar-caption">thu</p>
+        </div>
+        <div class="bar-container">
+          <div class="bar"></div>
+          <p class="bar-caption">fri</p>
+        </div>
+        <div class="bar-container">
+          <div class="bar"></div>
+          <p class="bar-caption">sat</p>
+        </div>
+        <div class="bar-container">
+          <div class="bar"></div>
+          <p class="bar-caption">sun</p>
+        </div>
+      </div>
 
-  +2.4%
-  from last month
+      <hr id="chart-summary-line-break">
+
+      <div class="month-stats-container">
+        <div class="month-stats-total">
+          <p class="stats-total-caption">Total this month</p> 
+          <p class="stats-total-value">$478.33</p>
+        </div>
+        <div class="month-stats-diff">
+          <p class="stats-diff-value">+2.4%</p> 
+          <p class="stats-diff-caption">from last month</p>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+  
+  
+
+  
   
   <div class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
+    Coded by <a href="#">Brian Wong</a>.
   </div>
 </body>
 </html>
