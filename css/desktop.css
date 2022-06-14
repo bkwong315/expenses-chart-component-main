@@ -68,14 +68,31 @@ body {
 }
 
 .bar-container {
-    width: 10%;
-    text-align: center;
-    margin: 10px 0px 10px 0px;
+	width: 12%;
+	text-align: center;
+	margin: 10px 0px 10px 0px;
+	display: flex;
+	justify-content: end;
+	flex-direction: column;
+}
+
+.bar-value {
+    position: relative;
+    height: 10%;
+    width: 120%;
+    color: white;
+    background-color: hsl(25, 47%, 15%);
+    left: -20%;
+    padding: 8px 0px 8px 0px;
+    border-radius: 5px;
+    margin: 5px;
+    font-weight: 700;
+    visibility: hidden;
 }
 
 .bar {
     background-color: hsl(10, 79%, 65%);
-    height: 90%;
+    height: 80%;
     border-radius: 7px;
 }
 
@@ -127,4 +144,8 @@ body {
 
 .stats-diff-caption {
     color: hsl(28, 10%, 53%);
+}
+
+.active {
+    background-color: hsl(186, 34%, 60%);
 }
