@@ -1,11 +1,23 @@
 html {
     font-family: 'DM Sans', sans-serif;
     font-size: 18px;
+    min-height: 100%;
 }
 
 body {
     background-color: hsl(27, 66%, 92%);
     margin: 0;
+}
+
+.css-grid {
+    min-height: 100%;
+    display: grid;
+    grid-template-columns: 30% 40% 30%;
+    grid-template-rows: [top-spacing-start] .20fr [content-start] .6fr [bot-spacing-start] .20fr [bot-spacing-end];
+    grid-template-areas:
+        "left-spacing top-spacing right-spacing"
+        "left-spacing content right-spacing"
+        "left-spacing bot-spacing right-spacing"
 }
 
 .content-container {
@@ -14,6 +26,8 @@ body {
     justify-content: space-between;
     margin: auto;
     width: 35vw;
+    grid-column-start: content;
+    grid-row-start: content;
 }
 
 .content-header {
@@ -74,31 +88,43 @@ body {
 	display: flex;
 	justify-content: end;
 	flex-direction: column;
+    align-items: center;
 }
 
 .bar-value {
     position: relative;
     height: 10%;
-    width: 120%;
-    color: white;
+    min-width: 100%;
+    width: auto;
+    color: hsl(27, 66%, 92%);
     background-color: hsl(25, 47%, 15%);
-    left: -20%;
-    padding: 8px 0px 8px 0px;
+    padding: 6px 4px 6px 4px;
     border-radius: 5px;
-    margin: 5px;
     font-weight: 700;
     visibility: hidden;
+    margin: 0px 0px 5px 0px;
 }
 
 .bar {
     background-color: hsl(10, 79%, 65%);
     height: 80%;
+    width: 100%;
     border-radius: 7px;
+}
+
+.bar:hover {
+    filter: none;
+    -webkit-filter: brightness(120%);
+    -moz-filter:    brightness(120%);
+    -ms-filter:     brightness(120%);
+    -o-filter:      brightness(120%);
+    cursor: pointer;
 }
 
 .bar-caption {
     margin: 0;
     height: 10%;
+    color: hsl(28, 10%, 53%)
 }
 
 #chart-summary-line-break {
@@ -126,7 +152,7 @@ body {
 }
 
 .stats-total-value {
-    font-size: 50px;
+    font-size: 45px;
     font-weight: 700;
     color: hsl(25, 47%, 15%);
 }
@@ -148,4 +174,9 @@ body {
 
 .active {
     background-color: hsl(186, 34%, 60%);
+}
+
+.attribution {
+    position: absolute;
+    bottom: 0;
 }

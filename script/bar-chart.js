@@ -31,17 +31,18 @@ let data = [
 
 function init() {
     let barDivs = document.querySelectorAll(".bar");
-    let totalAmt = 0;
+    let maxVal = 0;
 
-    for(let i = 0; i< data.length; i++) {
-        totalAmt += data[i].amount;
+    for(let i = 0; i < data.length; i++) {
+        if(data[i].amount > maxVal) 
+            maxVal = data[i].amount;
     }
 
     for(let i = 0; i < barDivs.length; i++) {
         let amt = data[i].amount;
 
-        console.log(amt/totalAmt * 100 + "%")
-        barDivs[i].style.height = amt/totalAmt * 100 + "%";
+        console.log(amt/Math.max() * 100 + "%")
+        barDivs[i].style.height = amt/maxVal * 100 + "%";
         barDivs[i].parentElement.querySelector(".bar-value").innerHTML = "$" + amt;
         barDivs[i].addEventListener("click", displayValue);
     }
