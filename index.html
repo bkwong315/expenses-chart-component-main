@@ -13,12 +13,14 @@
 
   <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
   <link rel="stylesheet" href="css\desktop.css" />
+  <script type="text/javascript" src="script\bar-chart.js"></script>
+  <script type="text/javascript" src="data.json"></script>
   <style>
     .attribution { font-size: 11px; text-align: center; }
     .attribution a { color: hsl(228, 45%, 44%); }
   </style>
 </head>
-<body>
+<body onload="init()">
 
   <div class="content-container">
     <div class="content-header">
@@ -38,30 +40,37 @@
 
       <div class="bar-chart-container">
         <div class="bar-container">
+          <p class="bar-value" id="bar-mon-val">$0.00</p>
           <div class="bar"></div>
           <p class="bar-caption">mon</p>
         </div>
         <div class="bar-container">
+          <p class="bar-value" id="bar-tue-val">$0.00</p>
           <div class="bar"></div>
           <p class="bar-caption">tue</p>
         </div>
         <div class="bar-container">
+          <p class="bar-value" id="bar-wed-val">$0.00</p>
           <div class="bar"></div>
           <p class="bar-caption">wed</p>
         </div>
         <div class="bar-container">
+          <p class="bar-value" id="bar-thu-val">$0.00</p>
           <div class="bar"></div>
           <p class="bar-caption">thu</p>
         </div>
         <div class="bar-container">
+          <p class="bar-value" id="bar-fri-val">$0.00</p>
           <div class="bar"></div>
           <p class="bar-caption">fri</p>
         </div>
         <div class="bar-container">
+          <p class="bar-value" id="bar-sat-val">$0.00</p>
           <div class="bar"></div>
           <p class="bar-caption">sat</p>
         </div>
         <div class="bar-container">
+          <p class="bar-value" id="bar-sun-val">$0.00</p>
           <div class="bar"></div>
           <p class="bar-caption">sun</p>
         </div>
